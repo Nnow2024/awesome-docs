@@ -31,6 +31,28 @@ sudo mv axllm /usr/bin/axllm
 
 ## LLM
 
+### Qwen3.5-2B
+
+```
+# 下载仓库
+cd /root/
+mkdir -p AXERA-TECH/Qwen3.5-2B
+cd AXERA-TECH/Qwen3.5-2B
+
+# 使用 huggingface 下载命令
+hf download AXERA-TECH/Qwen3.5-2B-AX650-C128-P1152-CTX2047 --local-dir .
+# 使用 modelscope 下载命令
+modelscope download AXERA-TECH/Qwen3.5-2B-AX650-C128-P1152-CTX2047 --local_dir .
+
+cd /root
+# 运行 CLI
+axllm run AXERA-TECH/Qwen3.5-2B/
+# 运行 API 服务
+axllm serve AXERA-TECH/Qwen3.5-2B/
+
+# 详细使用方法请参考：https://hf-mirror.com/AXERA-TECH/Qwen3.5-2B-AX650-C128-P1152-CTX2047 或 https://modelscope.cn/models/AXERA-TECH/Qwen3.5-2B-AX650-C128-P1152-CTX2047 Model card说明
+```
+
 ### Qwen3-4B
 
 ```
