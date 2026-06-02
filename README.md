@@ -1,15 +1,17 @@
 # awesome-docs 使用手册
 
-[**在线文档预览**](https://awesome-npu-docs.readthedocs.io/zh-cn/latest/index.html#)
+[**在线文档预览（latest）**](https://awesome-npu-docs.readthedocs.io/zh-cn/latest/index.html#)
+
+[**DEV 在线预览**](https://awesome-npu-docs.readthedocs.io/zh-cn/dev/index.html#)（需在 Read the Docs 后台启用 `dev` 版本）
 
 ## 1. 项目背景
 
-**awesome-docs** 是为了方便基于 AX650N DEMO Board（16+64GB）客户推广使用时快速评估 NPU 特性使用。
+**awesome-docs** 用于整理 AXERA 产品相关的软件、硬件、工具链和示例资料，方便社区开发者和商用客户查阅与评估。
 
-- 指导搭建评估 NPU 示例必要的系统软件环境;
-- 指导搭建评估 NPU 示例必要的软件依赖环境;
-- 各种 NPU 示例获取及上板运行示例；
-- 促进社区开发人员共同维护文档。
+当前文档由原有 AX650 系列 NPU 使用说明扩展而来，后续覆盖：
+
+- [终端计算产品线](https://www.axera-tech.com/zh-hans/product/vision)
+- [边缘计算产品线](https://www.axera-tech.com/zh-hans/product/edge-aI-inference?q=zh-hans/product/edge-aI-inference)
 
 ## 2. 本地编译指南
 
