@@ -37,6 +37,8 @@ html-en:
 	@$(SPHINXBUILD) -b html -D language=en "$(SOURCEDIR)" "$(BUILDDIR)/html-en" $(SPHINXOPTS) $(O)
 
 # 本地预览：构建后启动静态服务器
+# 端口可覆盖：make serve PORT=9000
+PORT ?= 8200
 serve: html
-	@echo "Serving at http://0.0.0.0:8000 (Ctrl+C to stop)"
-	@python -m http.server 8000 --directory "$(BUILDDIR)/html"
+	@echo "Serving at http://0.0.0.0:$(PORT) (Ctrl+C to stop)"
+	@python -m http.server $(PORT) --directory "$(BUILDDIR)/html"

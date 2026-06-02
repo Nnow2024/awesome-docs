@@ -1,6 +1,6 @@
 # 常见问题解答
 
-> 对使用过程中碰见的高频问题进行说明。欢迎通过 PR 补充。
+使用过程中碰到的高频问题。欢迎通过 PR 补充。
 
 ## 环境与依赖
 
@@ -10,8 +10,8 @@
 ## 硬件与固件
 
 - **Q：如何查询开发板固件版本？**
-  - A：`cat /proc/ax_proc/version`，详见 [基础软件环境](../04_dev_environment/base_software.md)。
+  - A：`cat /proc/ax_proc/version`，详见 [基础软件环境](../04_dev_environment/base_software.md) 的"系统相关 / 版本查询"。
 
 ## 更多
 
-> TODO：持续收集高频问题。
+> 待补充：持续收集高频问题，欢迎提 Issue 或 PR。

@@ -1,6 +1,6 @@
 # 开源社区资源
 
-## GitHub Organization
+## Github Organization
 
 - **官方组织**：
   - [AXERA-TECH (GitHub)](https://github.com/AXERA-TECH/)

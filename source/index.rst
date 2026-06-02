@@ -1,10 +1,9 @@
 AXERA 产品文档中心
 =======================================
 
-欢迎来到 **AXERA 开放共创文档中心**。本站面向社区开发者与潜在商用客户，
-覆盖 `终端计算 <https://www.axera-tech.com/zh-hans/product/vision>`_、
-`边缘计算 <https://www.axera-tech.com/zh-hans/product/edge-aI-inference>`_
-等全产品线，帮助你稳定、可靠地掌握我们的产品规格与能力边界。
+本站收录 AXERA `终端计算 <https://www.axera-tech.com/zh-hans/product/vision>`_ 和
+`边缘计算 <https://www.axera-tech.com/zh-hans/product/edge-aI-inference>`_ 产品线的技术资料，
+供社区开发者与商用客户查阅芯片规格、开发环境、算法示例和行业方案。
 
 .. toctree::
   :maxdepth: 2
