@@ -8,37 +8,37 @@
 
 #### 黑光系列
 
-| 芯片型号 | 产品描述 | NPU 算力 | 产品主页 | PDF | 备注 |
-| --- | --- | --- | --- | --- | --- |
-| AX650A | 8K 行业黑光视觉处理芯片 | 待补充 | [主页](https://www.axera-tech.com/index.php/zh-hans/product/2929.html) | [PDF](https://www.axera-tech.com/sites/default/files/2025-11/AX650A.pdf) | - |
-| AX630C | 4K 行业黑光视觉处理芯片 | 待补充 | [主页](https://www.axera-tech.com/index.php/zh-hans/product/2931.html) | [PDF](https://www.axera-tech.com/sites/default/files/2026-02/20260203120458_764.pdf) | - |
-| AX620Q | 5M 黑光低功耗视觉处理芯片 | 待补充 | [主页](https://www.axera-tech.com/index.php/zh-hans/product/2932.html) | [PDF](https://www.axera-tech.com/sites/default/files/2025-11/AX620Q.pdf) | - |
-| AX615 | 5Mp 黑光视觉处理芯片 | 待补充 | [主页](https://www.axera-tech.com/index.php/zh-hans/product/2956.html) | [PDF](https://www.axera-tech.com/sites/default/files/2026-03/20260309093158_780.pdf) | - |
+| 芯片型号 | 产品描述 | NPU 算力 | 产品主页 | PDF |
+| --- | --- | --- | --- | --- |
+| AX650A | 8K 行业黑光视觉处理芯片 | 43.2 TOPS@INT4 或 10.8 TOPS@INT8 | [主页](https://www.axera-tech.com/index.php/zh-hans/product/2929.html) | [PDF](https://www.axera-tech.com/sites/default/files/2025-11/AX650A.pdf) |
+| AX630C | 4K 行业黑光视觉处理芯片 | 12.8TOPs@INT4或3.2TOPs@INT8 | [主页](https://www.axera-tech.com/index.php/zh-hans/product/2931.html) | [PDF](https://www.axera-tech.com/sites/default/files/2026-02/20260203120458_764.pdf) |
+| AX620Q | 5M 黑光低功耗视觉处理芯片 | 9.6TOPs@INT4或2.4TOPs@IN8 | [主页](https://www.axera-tech.com/index.php/zh-hans/product/2932.html) | [PDF](https://www.axera-tech.com/sites/default/files/2025-11/AX620Q.pdf) |
+| AX615 | 5Mp 黑光视觉处理芯片 | 2 TOPs | [主页](https://www.axera-tech.com/index.php/zh-hans/product/2956.html) | [PDF](https://www.axera-tech.com/sites/default/files/2026-03/20260309093158_780.pdf) |
 
 #### 轻智能系列
 
-| 芯片型号 | 产品描述 | NPU 算力 | 产品主页 | PDF | 备注 |
-| --- | --- | --- | --- | --- | --- |
-| AX520CD | 5M 高集成度视觉处理芯片 | 待补充 | [主页](https://www.axera-tech.com/index.php/zh-hans/product/2935.html) | [PDF](https://www.axera-tech.com/sites/default/files/2025-11/AX520CD.pdf) | - |
-| AX520CE | 4M 高集成度视觉处理芯片 | 待补充 | [主页](https://www.axera-tech.com/index.php/zh-hans/product/2936.html) | [PDF](https://www.axera-tech.com/sites/default/files/2025-11/AX520CE.pdf) | - |
-| XS7312Q | 5M 高集成度视觉处理芯片 | 待补充 | [主页](https://www.axera-tech.com/index.php/zh-hans/product/2933.html) | [PDF](https://www.axera-tech.com/sites/default/files/2025-11/XS7312Q.pdf) | - |
-| AX513CE | 3Mp 高集成度视觉处理芯片 | 待补充 | [主页](https://www.axera-tech.com/index.php/zh-hans/product/2957.html) | [PDF](https://www.axera-tech.com/sites/default/files/2025-12/AX513CE.pdf) | - |
-| XS7302 | 3M 高集成度低功耗视觉处理芯片 | 待补充 | [主页](https://www.axera-tech.com/index.php/zh-hans/product/2934.html) | [PDF](https://www.axera-tech.com/sites/default/files/2025-11/XS7302.pdf) | - |
+| 芯片型号 | 产品描述 | NPU 算力 | 产品主页 | PDF |
+| --- | --- | --- | --- | --- |
+| AX520CD | 5M 高集成度视觉处理芯片 | 0.5 TOPS | [主页](https://www.axera-tech.com/index.php/zh-hans/product/2935.html) | [PDF](https://www.axera-tech.com/sites/default/files/2025-11/AX520CD.pdf) |
+| AX520CE | 4M 高集成度视觉处理芯片 | 0.5 TOPS | [主页](https://www.axera-tech.com/index.php/zh-hans/product/2936.html) | [PDF](https://www.axera-tech.com/sites/default/files/2025-11/AX520CE.pdf) |
+| XS7312Q | 5M 高集成度视觉处理芯片 | 0.5 TOPS | [主页](https://www.axera-tech.com/index.php/zh-hans/product/2933.html) | [PDF](https://www.axera-tech.com/sites/default/files/2025-11/XS7312Q.pdf) |
+| AX513CE | 3Mp 高集成度视觉处理芯片 | 0.5 TOPS | [主页](https://www.axera-tech.com/index.php/zh-hans/product/2957.html) | [PDF](https://www.axera-tech.com/sites/default/files/2025-12/AX513CE.pdf) |
+| XS7302 | 3M 高集成度低功耗视觉处理芯片 | 0.5 TOPS | [主页](https://www.axera-tech.com/index.php/zh-hans/product/2934.html) | [PDF](https://www.axera-tech.com/sites/default/files/2025-11/XS7302.pdf) |
 
 #### 行业系列
 
-| 芯片型号 | 产品描述 | NPU 算力 | 产品主页 | PDF | 备注 |
-| --- | --- | --- | --- | --- | --- |
-| XS7320 | 4K 行业视觉处理芯片 | 待补充 | [主页](https://www.axera-tech.com/index.php/zh-hans/product/2924.html) | [PDF](https://www.axera-tech.com/sites/default/files/2025-11/XS7320.pdf) | - |
-| XS7310 | 5M 行业视觉处理器 | 待补充 | [主页](https://www.axera-tech.com/index.php/zh-hans/product/2925.html) | [PDF](https://www.axera-tech.com/sites/default/files/2025-11/XS7310.pdf) | - |
+| 芯片型号 | 产品描述 | NPU 算力 | 产品主页 | PDF |
+| --- | --- | --- | --- | --- |
+| XS7320 | 4K 行业视觉处理芯片 | 1.5 TOPS | [主页](https://www.axera-tech.com/index.php/zh-hans/product/2924.html) | [PDF](https://www.axera-tech.com/sites/default/files/2025-11/XS7320.pdf) |
+| XS7310 | 5M 行业视觉处理器 | 1.5 TOPS | [主页](https://www.axera-tech.com/index.php/zh-hans/product/2925.html) | [PDF](https://www.axera-tech.com/sites/default/files/2025-11/XS7310.pdf) |
 
 ### 边缘计算芯片
 
-| 芯片型号 | 产品描述 | NPU 算力 | 产品主页 | PDF | 备注 |
-| --- | --- | --- | --- | --- | --- |
-| AX650N | 边缘计算 SoC | 待补充 | [主页](https://www.axera-tech.com/index.php/zh-hans/product/2897.html) | [PDF](https://www.axera-tech.com/sites/default/files/2026-05/20260522143336_842.pdf) | 与 AX8850N 为同一芯片，名称口径以资料为准 |
-| AX8850 | 高算力、高能效比数字 SoC 芯片 | 待补充 | [主页](https://www.axera-tech.com/index.php/zh-hans/product/2896.html) | [PDF](https://www.axera-tech.com/sites/default/files/2026-05/20260522143627_843.pdf) | - |
-| AX8850N | 高算力、高能效比 SoC 芯片 | 待补充 | [主页](https://www.axera-tech.com/index.php/zh-hans/product/2897.html) | [PDF](https://www.axera-tech.com/sites/default/files/2026-05/20260522143336_842.pdf) | - |
+| 芯片型号 | 产品描述 | NPU 算力 | 产品主页 | PDF |
+| --- | --- | --- | --- | --- |
+| AX650N | 边缘计算 SoC | 72.0TOPs@INT4或18.0TOPs@INT8 | [主页](https://www.axera-tech.com/index.php/zh-hans/product/2897.html) | [PDF](https://www.axera-tech.com/sites/default/files/2026-05/20260522143336_842.pdf) |
+| AX8850 | 高算力、高能效比数字 SoC 芯片 | 24TOPs@INT8 | [主页](https://www.axera-tech.com/index.php/zh-hans/product/2896.html) | [PDF](https://www.axera-tech.com/sites/default/files/2026-05/20260522143627_843.pdf) |
+| AX8850N | 高算力、高能效比 SoC 芯片 | 72.0TOPs @ INT4或18.0TOPs@INT8 | [主页](https://www.axera-tech.com/index.php/zh-hans/product/2897.html) | [PDF](https://www.axera-tech.com/sites/default/files/2026-05/20260522143336_842.pdf) |
 
 ## 应用场景雷达图
 
