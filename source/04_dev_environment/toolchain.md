@@ -9,7 +9,7 @@ NPU 工具链 **Pulsar2** 的最新 Release 发布在 Huggingface 上，下载�
   - [中文](https://pulsar2-docs.readthedocs.io/zh-cn/latest/index.html)
   - [英文](https://pulsar2-docs.readthedocs.io/en/latest/)
 - **下载**：
-  - Modelscope：TODO
+  - [Modelscope](https://modelscope.cn/models/AXERA-TECH/Pulsar2)
   - [Huggingface (Docker)](https://hf-mirror.com/AXERA-TECH/Pulsar2)
 
 ## AXCL 开发库
