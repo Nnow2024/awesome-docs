@@ -64,11 +64,15 @@ AX650N 是一颗专为边缘 AI 推理设计的高性能 SoC，集成 **八核 C
 #### 2.4.1 Mcap录制与回放
 **MCAP 录制自动滚动分段**：单个文件超过 512 MiB 自动切分，持续录制不中断。
 在开始输入./sample_stereo_depth -F 2 -r /opt/bin/sample_stereo_depth/ 其中 -r patch定义你录制mcap文件的保存路径。然后按下键盘的D键盘字符会开始录制，每按下D键盘一次就会打印一次录制帧。
+
   ![Stereo_depth demo图](../../_static/06_solutions/stereo_06.gif)
 
- 对录制的文件进行播放：./sample_stereo_depth -i ./stereo_depth_dump_sing
+
+对录制的文件进行播放：./sample_stereo_depth -i ./stereo_depth_dump_sing
 le_sn19555858_1780899407198779745.mcap --mcap-stream yuyv
+
 ![Stereo_depth demo图](../../_static/06_solutions/stereo_07.MP4)
+
 上述的播放是使用yuyv方式播放，能通过键盘的左右键(<>)进行单帧播放切换，查看数据集内每一帧在新算法下的效果。
 
 还可以使用mcap中的H.264数据回放
@@ -78,7 +82,9 @@ le_sn19555858_1780899407198779745.mcap --mcap-stream yuyv
 这时候会播放连贯的mcap录像，无法通过键盘的<>进行选帧播放
 #### 2.4.2 yuyv数据播放
 yuyv数据源帧回放输入演示如下：
+
   ![Stereo_depth demo图](../../_static/06_solutions/stereo_08.webm)
+  
 #### 2.4.3 HDMI播放
 **支持HDMI 四画面直出**（无foxglove）
 ![Stereo_depth demo图](../../_static/06_solutions/stereo_05.png)
@@ -104,7 +110,9 @@ yuyv数据源帧回放输入演示如下：
 搭配外接 **激光测距仪模块**（`/dev/ttyUSB0, 9600 8N1`），视觉与激光双重冗余，关键场景数据更可靠。并且方便对双目深度模组进行调试和验证。减少调试步骤给你全方位解决方案。
 ![Stereo_depth demo图](../../_static/06_solutions/stereo_11.png)
 灌图输出场景下也会发布新计算好的roi-z-avg信息，可以查看每一帧的roi数据。
+
 ![Stereo_depth demo图](../../_static/06_solutions/stereo_12.MP4)
+
 ### 3.3. 🔍 全链路开发排障工具链
 - **键盘逐帧控制**：MCAP 回放模式下，左右方向键精确选帧，一帧一帧检查结果
 - **终端性能看板**：`-t` 参数开启，实时显示吞吐/耗时/丢帧/队列深度/内存占用
