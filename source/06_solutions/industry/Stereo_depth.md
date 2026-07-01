@@ -64,7 +64,7 @@ AX650N 是一颗专为边缘 AI 推理设计的高性能 SoC，集成 **八核 C
 #### 2.4.1 Mcap录制与回放
 **MCAP 录制自动滚动分段**：单个文件超过 512 MiB 自动切分，持续录制不中断。
 在开始输入./sample_stereo_depth -F 2 -r /opt/bin/sample_stereo_depth/ 其中 -r patch定义你录制mcap文件的保存路径。然后按下键盘的D键盘字符会开始录制，每按下D键盘一次就会打印一次录制帧。
-  ![Stereo_depth demo图](../../_static/06_solutions/stereo_06.webm)
+  ![Stereo_depth demo图](../../_static/06_solutions/stereo_06.gif)
 
  对录制的文件进行播放：./sample_stereo_depth -i ./stereo_depth_dump_sing
 le_sn19555858_1780899407198779745.mcap --mcap-stream yuyv
