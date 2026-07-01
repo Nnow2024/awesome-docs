@@ -343,6 +343,7 @@ npu的lite模型面板
 
 ## 七、相关链接指引
  [stereo depth 双目资源说明](https://github.com/AXERA-TECH/stereo_depth)
+ 
  [扔掉激光雷达！用 AX8850N 双目深度方案，给机器人装上真正的「AI 之眼」](https://zhuanlan.zhihu.com/p/2047786127969477270?share_code=1fCr0OSS68Hst&utm_psn=2048076820596142796 )
   
  
