@@ -13,10 +13,10 @@
 
 ## 内容平台
 
-- **知乎**：[圈圈虫的知乎](https://www.zhihu.com/people/tang-qi-14-37/posts)，大量 AX650 系列部署技术软文。
-  - [基于 AX650 部署 YOLO11](https://zhuanlan.zhihu.com/p/772269394)
-  - [基于 AX650 部署 YOLOWorld](https://zhuanlan.zhihu.com/p/721856217)
-  - [基于 AX650 部署 YOLOv8](https://zhuanlan.zhihu.com/p/683050593)
+- **知乎**：[圈圈虫的知乎](https://www.zhihu.com/people/tang-qi-14-37/posts)，大量 AX8850N 系列部署技术软文。
+  - [基于 AX8850N 部署 YOLO11](https://zhuanlan.zhihu.com/p/772269394)
+  - [基于 AX8850N 部署 YOLOWorld](https://zhuanlan.zhihu.com/p/721856217)
+  - [基于 AX8850N 部署 YOLOv8](https://zhuanlan.zhihu.com/p/683050593)
 - **Bilibili**：[AXERA 官方空间](https://space.bilibili.com/1960137841)
 
 ## 开发板购买渠道（淘宝）

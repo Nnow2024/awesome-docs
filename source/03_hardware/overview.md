@@ -8,7 +8,7 @@
 
 | 名称 | 配置 (DDR/eMMC) | 主控芯片 | 厂商 |
 | --- | --- | --- | --- |
-| AX650N DEMO Board | 16GB / 64GB | AX650N | AXERA |
+| AX8850N DEMO Board | 16GB / 64GB | AX8850N | AXERA |
 | M4N-Dock (爱芯派Pro) | 8GB / 32GB | AX8850 | Sipeed |
 | AI Pyramid | 4GB / 32GB | AX8850 | M5Stack |
 | AI Pyramid Pro | 8GB / 32GB | AX8850 | M5Stack |
@@ -23,7 +23,7 @@
 | --- | --- | --- | --- |
 | LLM8850 | 8GB | AX8850 | M5Stack |
 | AX-M1 | 8GB | AX8850 | 瑞莎科技 |
-| M.2280卡 | 8GB / 16GB | AX650N / AX8850 | 以悦科技 / 鲸算智能 |
+| M.2280卡 | 8GB / 16GB | AX8850N / AX8850 | 以悦科技 / 鲸算智能 |
 
 ### 算力卡已适配主控架构
 
