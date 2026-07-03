@@ -53,39 +53,49 @@
 ### 四、整体流程图
 
 ```mermaid
-flowchart TD
-    A[浏览器麦克风或音频文件] --> B{输入方式}
+flowchart LR
+    A["浏览器麦克风或音频文件"] --> B{"输入方式"}
 
-    B -->|实时会议| C[浏览器采集音频]
-    C --> D[降采样到 16 kHz PCM16]
-    D --> E[WebSocket /ws 上传音频流]
-    E --> F[StreamingMeetingSession 缓存音频]
-    F --> G[周期性 VAD 检测]
-    G --> H[已完成语音段 ASR]
-    H --> I[前端显示实时分段转录]
-    I --> J[用户结束会议]
+    subgraph RT["实时会议"]
+        direction TB
+        C["浏览器采集音频"] --> D["降采样到 16 kHz PCM16"]
+        D --> E["WebSocket ws 上传音频流"]
+        E --> F["StreamingMeetingSession 缓存音频"]
+        F --> G["周期性 VAD 检测"]
+        G --> H["已完成语音段 ASR"]
+        H --> I["前端显示实时分段转录"]
+        I --> J["用户结束会议"]
+    end
 
-    B -->|离线导入| K[POST /diar_asr 上传音频]
-    K --> L[音频解码/重采样到 16 kHz]
-    L --> M[完整 Diarization + ASR]
+    subgraph OFF["离线导入"]
+        direction TB
+        K["POST diar_asr 上传音频"] --> L["音频解码并重采样到 16 kHz"]
+    end
 
-    J --> M
-    M --> N[分段 VAD, 长音频按 chunk 处理]
-    N --> O[提取 1.5s/0.75s 说话人 embedding]
-    O --> P[spectral 或 AHC 说话人聚类]
-    P --> Q[SenseVoiceSmall 带时间戳 ASR]
-    Q --> R[按时间重叠分配 Speaker_N]
-    R --> S[完整转录文本]
+    B -->|"实时会议"| C
+    B -->|"离线导入"| K
 
-    S --> T{是否启用总结}
-    T -->|启用| U[IncrementalSummarizer 分块总结]
-    U --> V[OpenAI 兼容 LLM 服务]
-    V --> W[会议纪要]
-    T -->|DISABLE_SUMMARY=1| X[跳过总结]
+    J --> M["完整 Diarization 和 ASR"]
+    L --> M
 
-    W --> Y[保存 result_txt 时间戳文件]
+    subgraph POST["会后处理"]
+        direction TB
+        M --> N["分段 VAD 和长音频 chunk 处理"]
+        N --> O["提取说话人 embedding"]
+        O --> P["spectral 或 AHC 说话人聚类"]
+        P --> Q["SenseVoiceSmall 带时间戳 ASR"]
+        Q --> R["按时间重叠分配 Speaker N"]
+        R --> S["完整转录文本"]
+    end
+
+    S --> T{"是否启用总结"}
+    T -->|"启用"| U["IncrementalSummarizer 分块总结"]
+    U --> V["OpenAI 兼容 LLM 服务"] --> W["会议纪要"]
+    T -->|"禁用总结"| X["跳过总结"]
+
+    W --> Y["保存 result txt 时间戳文件"]
     X --> Y
-    Y --> Z[清空会话缓存, 删除临时录音, gc + malloc_trim]
+    Y --> Z["清空会话缓存和临时录音并释放内存"]
 ```
 
 ### 五、规格参数与资源占用
