@@ -7,7 +7,7 @@ import os
 
 # -- Project information -----------------------------------------------------
 
-project = 'AXERA EDGE Docs'
+project = 'Edge Computing Docs'
 copyright = '2026, AXERA Semiconductor Co., Ltd.'
 author = 'AXERA & Community'
 
@@ -43,7 +43,7 @@ exclude_patterns = ['examples/*[!.zip]']
 
 html_theme = 'sphinx_book_theme'
 html_static_path = ['_static']
-html_title = 'AXERA 产品文档中心'
+html_title = 'AXERA Edge Computing Docs'
 
 html_theme_options = {
     'repository_url': 'https://github.com/AXERA-TECH/awesome-docs',
