@@ -1,0 +1,4 @@
+# AX650 DEMO Board
+
+本章适用于 AX650N（AX8850N/AX8850）开发板
+

@@ -38,7 +38,7 @@ python -m http.server 8200 --directory build/html
 
 ## 板卡厂家分权维护
 
-[生态硬件](../03_hardware/index.md) 章节由各板卡厂家维护自家页面，要求：
+[生态硬件](../08_3rdparty_hardware/index.md) 章节由各板卡厂家维护自家页面，要求：
 
 - 用户无需原厂介入即可独立完成上板和性能评估；
 - 内容包含：公司简介、产品亮点与规格、适用场景、资源/购买链接。

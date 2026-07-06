@@ -42,4 +42,4 @@
 
 ## 跑分工具
 
-板端模型 latency 可使用 `ax_run_model` 测量。完整 Benchmark 工具、算力卡跑分工具、LLM/VLM 跑分脚本仍在补充中，相关说明见 [基础软件环境](../04_dev_environment/base_software.md) 的"跑分工具使用"小节。
+板端模型 latency 可使用 `ax_run_model` 测量。完整 Benchmark 工具、算力卡跑分工具、LLM/VLM 跑分脚本仍在补充中，相关说明见 [基础软件环境](../05_software/base_software.md) 的"跑分工具使用"小节。

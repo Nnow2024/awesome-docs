@@ -12,9 +12,11 @@ AXERA 边缘计算产品线“一指禅”文档
 
   01_overview/index
   02_benchmark/index
-  03_hardware/index
-  04_dev_environment/index
-  05_algorithm/index
-  06_solutions/index
-  07_thirdparty/index
-  08_community/index
+  03_quick_start/index
+  04_hardware/index
+  05_software/index
+  06_samples/index
+  07_solutions/index
+  08_3rdparty_hardware/index
+  09_3rdparty_solutions/index
+  10_community/index
