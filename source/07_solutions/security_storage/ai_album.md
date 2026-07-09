@@ -1,4 +1,5 @@
 # AI 相册
+
 ## 一、简介
 
 Axera 芯片本地 AI 私有云相册解决方案，通过将开源相册 Immich 深度适配至爱芯元智（Axera）边缘硬件，打造了一条完整的本地智能影像数据链路。
@@ -32,12 +33,12 @@ Axera 芯片本地 AI 私有云相册解决方案，通过将开源相册 Immich
 
 在网页端进行“穿红色衣服的小孩”、“在黑色汽车上的猫”、“savor delicious food”等中英文描述搜索
 
-<video src="../../_static/06_solutions/immich/web-clip.mp4" width="100%" autoplay loop muted playsinline>
+<video src="../../_static/07_solutions/immich/web-clip.mp4" width="100%" autoplay loop muted playsinline>
 </video>
 
 在APP端使用OCR功能，进行图片水印、变形字体的搜索
 
-<video src="../../_static/06_solutions/immich/app_ocr.mp4" style="max-width: 280px; width: 100%; border-radius: 16px; box-shadow: 0 4px 12px rgba(0,0,0,0.15);" autoplay loop muted playsinline>
+<video src="../../_static/07_solutions/immich/app_ocr.mp4" style="max-width: 280px; width: 100%; border-radius: 16px; box-shadow: 0 4px 12px rgba(0,0,0,0.15);" autoplay loop muted playsinline>
 </video>
 
 ### 2.智能人物相册
@@ -47,9 +48,9 @@ Axera 芯片本地 AI 私有云相册解决方案，通过将开源相册 Immich
 - 全自动化的人物特征提取与高精度聚类，彻底免去繁琐的人工挑图与分类建档工作。
 - 建立动态生长的个人影像库，新上传的照片自动触发比对规则，实现无感自动入库。
 - 高自由度的干预机制，支持用户对自动归类进行自定义命名与手动修正，确保图谱精准度。
-在“探索”界面直观管理所有人物图谱，让海量照片按人像自动井然有序，轻松构建专属的家庭成员或社交圈数字成长轨迹。
+  在“探索”界面直观管理所有人物图谱，让海量照片按人像自动井然有序，轻松构建专属的家庭成员或社交圈数字成长轨迹。
 
-<video src="../../_static/06_solutions/immich/Insightface.mp4" width="100%" autoplay loop muted playsinline>
+<video src="../../_static/07_solutions/immich/Insightface.mp4" width="100%" autoplay loop muted playsinline>
 </video>
 
 ### 3.唤醒老照片
@@ -62,7 +63,7 @@ Axera 芯片本地 AI 私有云相册解决方案，通过将开源相册 Immich
 
 在网页端重新编辑图片地址信息，并同步到地图中，方便快速翻阅，快速打造属于自己的“旅行足迹”
 
-<video src="../../_static/06_solutions/immich/map.mp4" width="100%" autoplay loop muted playsinline>
+<video src="../../_static/07_solutions/immich/map.mp4" width="100%" autoplay loop muted playsinline>
 </video>
 
 ### 4.自动备份
@@ -75,7 +76,7 @@ Axera 芯片本地 AI 私有云相册解决方案，通过将开源相册 Immich
 
 APP同步相册，拍照完成后，自动同步相册数据，并将位置信息同步到地图
 
-<video src="../../_static/06_solutions/immich/Backup.mp4" style="max-width: 280px; width: 100%; border-radius: 16px; box-shadow: 0 4px 12px rgba(0,0,0,0.15);" autoplay loop muted playsinline>
+<video src="../../_static/07_solutions/immich/Backup.mp4" style="max-width: 280px; width: 100%; border-radius: 16px; box-shadow: 0 4px 12px rgba(0,0,0,0.15);" autoplay loop muted playsinline>
 </video>
 
 ## 四、开发者接入示例
@@ -154,7 +155,7 @@ Immich 服务由 Docker 中的 `server/postgres/redis` 与宿主机 `immich_ml` 
 ### **3、搜索能力**
 
 - **后端搜索接口能力**
-使用脚本直接请求 Immich 搜索接口，分别覆盖元数据搜索 `/api/search/metadata` 和智能语义搜索 `/api/search/smart`。每个关键词连续执行 10 轮，第 1 轮作为首次查询参考，第 2-10 轮作为热查询统计。该指标反映服务端从接收搜索请求到返回 JSON 结果的耗时，不包含浏览器输入防抖、页面渲染、缩略图加载等前端开销。
+  使用脚本直接请求 Immich 搜索接口，分别覆盖元数据搜索 `/api/search/metadata` 和智能语义搜索 `/api/search/smart`。每个关键词连续执行 10 轮，第 1 轮作为首次查询参考，第 2-10 轮作为热查询统计。该指标反映服务端从接收搜索请求到返回 JSON 结果的耗时，不包含浏览器输入防抖、页面渲染、缩略图加载等前端开销。
 
 | 能力项 | 测试内容 | 测试结果 | 产品化描述 |
 | --- | --- | --- | --- |
@@ -177,9 +178,11 @@ Immich 服务由 Docker 中的 `server/postgres/redis` 与宿主机 `immich_ml` 
 | 推荐 CMM 配置 | 4 GiB | 本次测试配置余量充足，适合展示和扩展 |
 | 模型缓存空间 | >= 1 GiB | 当前模型缓存约 637 MiB，建议留足更新空间 |
 | 图库空间 | 原图空间 + 30% 以上 | 缩略图、索引、派生文件会随图库增长 |
+
 ## 六、相关链接指引
 
 - [immich官网](https://immich.app/)
 - [axera适配immich源码](https://github.com/AXERA-TECH/immich/tree/ax650-v2.7.5)
 - [AXERA-TECH/immich](https://huggingface.co/AXERA-TECH/immich)
 - [告别云相册订阅费！在 AI Pyramid Pro上一键部署本地满血 AI 智能搜索相册 Immich - 知乎](https://zhuanlan.zhihu.com/p/2051749029223183792)
+
