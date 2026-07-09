@@ -7,14 +7,14 @@ sample_stereo_depth 是一款面向双目视觉输入的深度感知应用，用
 应用支持实时相机输入，也支持离线文件回放。运行后可将处理结果通过 Foxglove 实时发布，也可按需保存为 MCAP 文件，便于回放、分析和问题定位。此外，还可通过 HDMI 进行本地预览输出。
 
 默认支持的双目相机型号为 ZED-M。demo板的硬件连接图如下：
-![Stereo_depth demo图](../../_static/06_solutions/stereo_01.png)
+![Stereo_depth demo图](../../_static/07_solutions/stereo_01.png)
 
 foxglove能实时发布主要包含如下信息：
 - **RGB图**
 - **视差图**
 - **点云图**
 
-![Stereo_depth demo图](../../_static/06_solutions/stereo_02.png)
+![Stereo_depth demo图](../../_static/07_solutions/stereo_02.png)
 想象一下，你正在做一款扫地机器人，但研发路上却处处碰壁：
 
 - **激光雷达成本居高不下：** 一颗单线激光雷达就要几百块，多线雷达更是天价。为了测距，整机 BOM 成本蹭蹭往上涨。
@@ -31,12 +31,12 @@ foxglove能实时发布主要包含如下信息：
 而这正是 **AX8850N** 的主场。
 
 AX650N 是一颗专为边缘 AI 推理设计的高性能 SoC，集成 **八核 Cortex-A55 处理器**、**18 TOPS @ INT8 NPU** 和 **双核 DSP**，同时配备硬件级 ISP、GDC 引擎和 8K 视频编解码器。这意味着什么？——**双目校正、深度推理、点云生成、视频录制，全部在一颗芯片上并行完成，无需外挂 GPU 或额外处理器。**
-![Stereo_depth demo图](../../_static/06_solutions/stereo_03.png)
+![Stereo_depth demo图](../../_static/07_solutions/stereo_03.png)
 ### 2.2 一行命令，唤醒视觉感知
 #### 第一步：硬件连接
 
 将双目摄像头（默认支持 ZED-M）通过 USB-type C 接入 AX650N 开发板，连接 HDMI 显示器或网线即可。
-![Stereo_depth demo图](../../_static/06_solutions/stereo_01.png)
+![Stereo_depth demo图](../../_static/07_solutions/stereo_01.png)
 #### 第二步：启动应用
 
 进入应用目录，执行一条命令：
@@ -65,13 +65,13 @@ AX650N 是一颗专为边缘 AI 推理设计的高性能 SoC，集成 **八核 C
 **MCAP 录制自动滚动分段**：单个文件超过 512 MiB 自动切分，持续录制不中断。
 在开始输入./sample_stereo_depth -F 2 -r /opt/bin/sample_stereo_depth/ 其中 -r patch定义你录制mcap文件的保存路径。然后按下键盘的D键盘字符会开始录制，每按下D键盘一次就会打印一次录制帧。
 
-  ![Stereo_depth demo图](../../_static/06_solutions/stereo_06.gif)
+  ![Stereo_depth demo图](../../_static/07_solutions/stereo_06.gif)
 
 
 对录制的文件进行播放：./sample_stereo_depth -i ./stereo_depth_dump_sing
 le_sn19555858_1780899407198779745.mcap --mcap-stream yuyv
 
-![Stereo_depth demo图](../../_static/06_solutions/stereo_07.gif)
+![Stereo_depth demo图](../../_static/07_solutions/stereo_07.gif)
 
 上述的播放是使用yuyv方式播放，能通过键盘的左右键(<>)进行单帧播放切换，查看数据集内每一帧在新算法下的效果。
 
@@ -83,35 +83,35 @@ le_sn19555858_1780899407198779745.mcap --mcap-stream yuyv
 #### 2.4.2 yuyv数据播放
 yuyv数据源帧回放输入演示如下：
 
-  ![Stereo_depth demo图](../../_static/06_solutions/stereo_08.gif)
+  ![Stereo_depth demo图](../../_static/07_solutions/stereo_08.gif)
   
 #### 2.4.3 HDMI播放
 **支持HDMI 四画面直出**（无foxglove）
-![Stereo_depth demo图](../../_static/06_solutions/stereo_05.png)
+![Stereo_depth demo图](../../_static/07_solutions/stereo_05.png)
 当你进行双目深度调试处于无网环境时，只要您有一台显示器，就可以将所有信息都显示方便调试。
 #### 2.4.4 foxglove实时预览
 
 打开 Foxglove，连接 `ws://<设备IP>:8765`，即可看到实时发布的 **去畸变 RGB 图像、视差图、点云、网格距离图、ROI 摘要** ——五维输出，一览无余。
 **点云图、视差图以及RGB图展示如下**
-![Stereo_depth demo图](../../_static/06_solutions/stereo_02.png)
+![Stereo_depth demo图](../../_static/07_solutions/stereo_02.png)
 **设备信息、ROI统计信息、宫格图显示**
-![Stereo_depth demo图](../../_static/06_solutions/stereo_04.png)
+![Stereo_depth demo图](../../_static/07_solutions/stereo_04.png)
 
 ## 三、方案核心能力与场景
 
 ### 3.1. 🚀 替代激光雷达，SLAM 实时建图
 
 双目深度 + SLAM 的结合，让扫地机器人、割草机器人彻底摆脱昂贵的激光雷达。**视觉 SLAM 不仅成本更低，还能同时获取纹理信息**——知道"前方有一堵白墙"比"前方 0.5 米有障碍物"有用得多。可同时获取RGB图信息和视差图，通过融合算法能准确知道障碍物类型，有利于算法计算以及后续的路劲规划。
-![Stereo_depth demo图](../../_static/06_solutions/stereo_10.png)
+![Stereo_depth demo图](../../_static/07_solutions/stereo_10.png)
 ### 3.2. 🎯 精准距离感知：9 区域 ROI 摘要
 
 系统自动将画面划分为 9 个固定 ROI 区域，实时输出每个区域的距离均值 + 置信度评估。哪边有障碍物、哪边是开阔地，一目了然。
-![Stereo_depth demo图](../../_static/06_solutions/stereo_09.png)
+![Stereo_depth demo图](../../_static/07_solutions/stereo_09.png)
 搭配外接 **激光测距仪模块**（`/dev/ttyUSB0, 9600 8N1`），视觉与激光双重冗余，关键场景数据更可靠。并且方便对双目深度模组进行调试和验证。减少调试步骤给你全方位解决方案。
-![Stereo_depth demo图](../../_static/06_solutions/stereo_11.png)
+![Stereo_depth demo图](../../_static/07_solutions/stereo_11.png)
 灌图输出场景下也会发布新计算好的roi-z-avg信息，可以查看每一帧的roi数据。
 
-![Stereo_depth demo图](../../_static/06_solutions/stereo_12.gif)
+![Stereo_depth demo图](../../_static/07_solutions/stereo_12.gif)
 
 ### 3.3. 🔍 全链路开发排障工具链
 - **键盘逐帧控制**：MCAP 回放模式下，左右方向键精确选帧，一帧一帧检查结果
@@ -129,7 +129,7 @@ yuyv数据源帧回放输入演示如下：
 ./sample_stereo_depth --uvc-list-all-controls
 ```
 ./sample_stereo_depth -t查看性能面板，如果需要查看不同模型的性能，需要使用 -e 和 -m组合形式去看。总共分为四种组合分别是dsp的dual|single模式以及npu的pro/little模型。
-![Stereo_depth demo图](../../_static/06_solutions/stereo_13.png)
+![Stereo_depth demo图](../../_static/07_solutions/stereo_13.png)
 stage 列：demo程序开启的线程名称。cap:灌图/采集 pre:图像预处理 inter:NPU 推理  post:推理完成后到pub发布之间的处理阶段。 pub:发布阶段，主要是对接foxglove。 vo:启动hdmi的处理 dump：dump数据的处理
 fps: 各环节的帧率
 wait_in_ms:个线程等待的时间
@@ -139,9 +139,9 @@ subs_total:订阅数
 e2e_ms：从cap到发布完成的时间
 针对逆光场景你无需再次重新编译sdk，而是直接提供UVC基本画面调节指令，免去多次反复编译烧录的烦恼，快速提升场景和测试验证效率。
 正常画面：
-![Stereo_depth demo图](../../_static/06_solutions/stereo_14.png)
+![Stereo_depth demo图](../../_static/07_solutions/stereo_14.png)
 调节brightness后的画面：
-![Stereo_depth demo图](../../_static/06_solutions/stereo_15.png)
+![Stereo_depth demo图](../../_static/07_solutions/stereo_15.png)
 ### 3.4. ⚡ 双推理后端：NPU / DSP 灵活切换
 | 后端             | 命令                                                                           | 特点                                |
 | -------------- | ---------------------------------------------------------------------------- | --------------------------------- |
@@ -149,9 +149,9 @@ e2e_ms：从cap到发布完成的时间
 | **DSP dual**   | `./sample_stereo_depth -e dsp -c dual`                                       | 低功耗，双核并行吞吐更高                      |
 | **DSP single** | `./sample_stereo_depth -e dsp -c single`                                     | 最低功耗，轻量场景适用                       |
 DSP dual模型下的性能面板
-![Stereo_depth demo图](../../_static/06_solutions/stereo_16.png)
+![Stereo_depth demo图](../../_static/07_solutions/stereo_16.png)
 npu的lite模型面板
-![Stereo_depth demo图](../../_static/06_solutions/stereo_17.png)
+![Stereo_depth demo图](../../_static/07_solutions/stereo_17.png)
 
 ### 3.5. 适用场景
 - **扫地机器人 / 割草机**：视觉 SLAM 替代激光雷达，BOM 成本直降，感知信息翻倍
@@ -205,23 +205,23 @@ npu的lite模型面板
 以及不同距离下的精度，用 **激光测距仪读数作为真值**，对比双目深度方案的测距误差。
 
 ### 场景一：道路-自行车（中距离 1-5m）
-![Stereo_depth demo图](../../_static/06_solutions/stereo_18.png)
+![Stereo_depth demo图](../../_static/07_solutions/stereo_18.png)
 ### 场景二：道路栅栏（近距离 0.3-3m）
-![Stereo_depth demo图](../../_static/06_solutions/stereo_19.png)
+![Stereo_depth demo图](../../_static/07_solutions/stereo_19.png)
 ### 场景三：草丛边缘（1-4m）
-![Stereo_depth demo图](../../_static/06_solutions/stereo_20.png)
+![Stereo_depth demo图](../../_static/07_solutions/stereo_20.png)
 ### 场景四：草坪-树林-逆光
-![Stereo_depth demo图](../../_static/06_solutions/stereo_21.png)
+![Stereo_depth demo图](../../_static/07_solutions/stereo_21.png)
 ### 测距精度汇总
 
 我们以激光测距仪读数为基准，在不同距离下记录了双目深度方案的测量值：
-![Stereo_depth demo date](../../_static/06_solutions/lite-AX650.xlsx)
+![Stereo_depth demo date](../../_static/07_solutions/lite-AX650.xlsx)
 由于双目视差限制，在近距离20cm处，处于深度双目模组的盲区，在正常工作范围30cm~300cm内精度误差在2%以内。
 
 > 注：测试条件为 ZED-M 相机 + AX650N NPU 后端，默认分辨率 2560×720。真值使用激光测距仪多次测量取均值。!
 
 ### 距离-误差趋势
-![Stereo_depth demo图](../../_static/06_solutions/stereo_22.png)
+![Stereo_depth demo图](../../_static/07_solutions/stereo_22.png)
 
 从趋势可以看出，双目深度方案在 **0.3-3m 近距离段** 误差控制在极低水平，完全满足扫地机器人、割草机等室内外避障与 SLAM 建图需求；**3-5m 中远距离段** 误差略有上升，仍能为服务机器人和工业检测提供可靠参考。
 
