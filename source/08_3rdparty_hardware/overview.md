@@ -6,24 +6,21 @@
 
 ### 主控开发板
 
-| 名称 | 配置 (DDR/eMMC) | 主控芯片 | 厂商 |
+| 名称 | 配置（DDR/eMMC） | 主控芯片 | 厂商 |
 | --- | --- | --- | --- |
 | AX8850N DEMO Board | 16GB / 64GB | AX8850N | AXERA |
-| M4N-Dock (爱芯派Pro) | 8GB / 32GB | AX8850 | Sipeed |
-| AI Pyramid | 4GB / 32GB | AX8850 | M5Stack |
-| AI Pyramid Pro | 8GB / 32GB | AX8850 | M5Stack |
-| M4N DOCK | 待补充 | AX8850 | Sipeed |
+| [M4N-Dock（爱芯派 Pro）](sipeed.md) | 8GB / 32GB | AX650N / AX8850N | Sipeed |
+| [AI Pyramid Pro](m5stack.md) | 8GB / 32GB | AX8850 | M5Stack |
 | 开发套件 | 待补充 | AX8850N | 蜜连科技 |
-| AIBOX | 待补充 | AX8850N | 以悦科技 |
-| AIBOX | 待补充 | AX8850 | 鲸算智能 |
+| [AIBOX](yiyue.md) | 以商品 SKU 为准 | AX8850N | 以悦科技 |
 
 ### 算力卡
 
 | 名称 | 配置 (DDR) | 芯片 | 厂商 |
 | --- | --- | --- | --- |
-| LLM8850 | 8GB | AX8850 | M5Stack |
-| AX-M1 | 8GB | AX8850 | 瑞莎科技 |
-| M.2280卡 | 8GB / 16GB | AX8850N / AX8850 | 以悦科技 / 鲸算智能 |
+| [AI-8850 LLM Acceleration M.2 Kit](m5stack.md) | 4GB | AX8850 | M5Stack |
+| [AICore AX-M1](radxa.md) | 8GB | AX8850 | 瑞莎科技 |
+| [M.2 2280 算力卡](yiyue.md) | 以商品 SKU 为准 | AX8850 | 以悦科技 |
 
 ### 算力卡已适配主控架构
 
@@ -32,6 +29,3 @@
 | X86 | Intel、AMD |
 | aarch64 | Raspberry Pi5、Rockchip (RK3588/RK3576/RK3568)、AllWinner (A733)、NXP、Xilinx |
 
-```{note}
-表中"待补充"项由对应厂商在各自页面补全后同步更新。
-```
