@@ -191,8 +191,11 @@ flowchart LR
 
 AX8850 / AX8850N 主控开发板示例：
 首先，将Demo板音频部分的跳线调整为下图所示：
+
 ![audio跳线图](../_static/06_samples/8850_audio.jpg)
+
 使用跳线帽连接好对应的引脚，使用板载两个mic作为输入源，并且使用line_out接口作为输出端口。
+
 然后在终端中执行如下命令：
 
 ````bash
@@ -200,7 +203,9 @@ sample_audio ai_aenc -D 0 -d 2 -r 16000 -p 160 -e aac --aac-type 2 --trans-type 
 ````
 
 会在当前路径下生成record.aac文件，将文件拷贝到电脑可以使用播放器播放，查看文件的采样率等信息与参数对应：
+
 ![audio图](../_static/06_samples/aac_play.jpg)
+
 此时音频数据的链路如下：
 
 ```mermaid
@@ -234,8 +239,11 @@ flowchart LR
 
 AX8910 主控开发板示例：
 首先，将Demo板音频部分的拨码开关调整为下图所示：
+
 ![audio图](../_static/06_samples/637audio.jpg)
+
 箭头指出的开关均需要拨到“ON”的位置，使用板载的两个mic作为音频输入源，并且使用line_out接口作为音频输出端口。
+
 然后在终端中执行如下命令：
 
 ````bash
