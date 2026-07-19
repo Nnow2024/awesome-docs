@@ -10,7 +10,7 @@
 
 本方案提供一套面向 8850N/8850 的会议转录和大模型会议纪要生成的端侧会议处理系统，支持两种使用方式：
 
-- 浏览器实时会议：浏览器采集麦克风音频，实时分段转录；会议结束后进行完整说话人聚类、带说话人标注的 ASR 转录，并调用 OpenAI 兼容的大模型服务生成会议纪要。
+- 浏览器实时会议：浏览器采集麦克风音频，实时分段转录；会议结束后进行完整的说话人聚类、带说话人标注的 ASR 转录，并调用 OpenAI 兼容的大模型服务生成会议纪要。
 - 离线音频导入：上传 `wav/flac/mp3/mp4/m4a` 等音频文件，服务端完成说话人识别和 ASR 转录，再按需生成会议纪要。
 
 本方案为完整的本地会议智能链路：音频采集、VAD 切分、实时转录、说话人识别、完整转写、会议纪要、结果归档都在同一套服务中闭环。
@@ -34,7 +34,7 @@
 
 | 常见问题 | 方案价值 |
 | --- | --- |
-| 只做单段 ASR，无法区分多人会议中是谁在说话 | 通过 CAMPPlus embedding + spectral/AHC 聚类输出 `Speaker_N`，适合多人会议整理 |
+| 只做单段 ASR，无法区分多人会议中是谁在说话 | 通过 CAM++ embedding + spectral/AHC 聚类输出 `Speaker_N`，适合多人会议整理 |
 | 云端 ASR 和云端总结涉及网络、隐私和成本 | 语音识别和说话人识别在板端完成，总结可接本地 OpenAI 兼容 LLM |
 | 实时转录和最终纪要目标不同，单一路径难兼顾 | 实时阶段做低延迟分段显示，会议结束后再跑完整说话人识别和最终 ASR |
 | 产品侧提供二次开发接口 | FastAPI 提供 WebSocket、上传识别、总结、导出和录音下载接口，便于集成到业务系统 |
@@ -82,21 +82,22 @@ flowchart TB
 
 | 项目 | 当前参考 | 对本方案的意义 |
 | --- | --- | --- |
-| SoC / NPU | 提供 24 TOPS @ INT8 的算力 | 承担 VAD、CAMPPlus、SenseVoiceSmall 和本地 LLM 推理 |
+| SoC / NPU | 提供 24 TOPS @ INT8 的算力 | 承担 VAD、CAM++、SenseVoiceSmall 和本地 LLM 推理 |
 | CPU | Arm Linux 环境 | 运行 FastAPI、WebSocket、音频解码、fbank、聚类、文本后处理和 LLM 客户端 |
-| CMM | AX 运行时硬件连续内存池 | 加载和运行 NPU 模型，是单模型资源评估的关键指标 |
-| 系统内存 | Linux OS 内存 | 承担 Python 进程、音频缓存、聚类矩阵、ASR metadata、本地 LLM 服务等 |
+| 内存体系 | 系统内存 + CMM 等硬件加速内存池 |承担 Python 进程、音频缓存、聚类矩阵、ASR metadata、本地 LLM 服务等 |
 | 网络 | 局域网 HTTP/HTTPS + WebSocket | 支撑浏览器访问、音频流上传和 OpenAI 兼容接口调用 |
 | 存储 | 本地文件系统 | 保存 wheel、axmodel、录音临时文件、转录和摘要结果写入 |
 
 #### 5.2 性能参考
 
-| 模块 | model | avg latency | CMM MB |
+基于AX8850N的板端测试，使用 16kHz 单声道音频，VAD、CAM++、SenseVoiceSmall 的平均延迟和 CMM 占用如下表所示：
+
+| 模块 | model | avg latency | CMM MiB |
 |---|---|---:|---:|
-| VAD | `vad` | `5.440 ms` | `1.09 MB` |
-| Speaker Embedding | `camplusplus` | `2.895 ms` | `10.24 MB` |
-| ASR | `sensevoice` | `25.462 ms` |  `250.02 MB` |
-| 合计 | - | `33.797ms` | `261.36 MB` |
+| VAD | `VAD` | `5.440 ms` | `1.09 MiB` |
+| Speaker Embedding | `CAM++` | `2.895 ms` | `10.24 MiB` |
+| ASR | `SenseVoiceSmall` | `25.462 ms` |  `250.02 MiB` |
+| 合计 | - | `33.797 ms` | `261.36 MiB` |
 
 RTF 定义：
 

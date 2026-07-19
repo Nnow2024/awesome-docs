@@ -18,7 +18,7 @@ cd ax-llm
 curl -fsSL https://raw.githubusercontent.com/AXERA-TECH/ax-llm/axllm/install.sh | bash
 ```
 
-方式三：下载Github Actions CI 导出的可执行程序（适合没有编译环境的用户）：
+方式三：下载 GitHub Actions CI 导出的可执行程序（适合没有编译环境的用户）：
 
 如果没有编译环境，请到：
 `https://github.com/AXERA-TECH/ax-llm/actions?query=branch%3Aaxllm`
@@ -33,7 +33,7 @@ sudo mv axllm /usr/bin/axllm
 
 ### Qwen3.5-2B
 
-```
+```shell
 # 下载仓库
 cd /root/
 mkdir -p AXERA-TECH/Qwen3.5-2B
@@ -55,9 +55,9 @@ axllm serve AXERA-TECH/Qwen3.5-2B/
 
 ## Multimodal Models
 
-### Qwen3-VL-2B-Instruct-GPTQ-Int4(图片&视频理解)
+### Qwen3-VL-2B-Instruct-GPTQ-Int4（图片 & 视频理解）
 
-```
+```shell
 # 下载仓库
 cd /root/
 mkdir -p AXERA-TECH/Qwen3-VL-2B-Instruct-GPTQ-Int4
@@ -74,14 +74,14 @@ axllm run AXERA-TECH/Qwen3-VL-2B-Instruct-GPTQ-Int4/
 # 运行 API 服务
 axllm serve AXERA-TECH/Qwen3-VL-2B-Instruct-GPTQ-Int4/
 
-#详细使用方法请参考：https://hf-mirror.com/AXERA-TECH/Qwen3-VL-2B-Instruct-GPTQ-Int4 或 https://modelscope.cn/models/AXERA-TECH/Qwen3-VL-2B-Instruct-GPTQ-Int4 Model card说明
+# 详细使用方法请参考：https://hf-mirror.com/AXERA-TECH/Qwen3-VL-2B-Instruct-GPTQ-Int4 或 https://modelscope.cn/models/AXERA-TECH/Qwen3-VL-2B-Instruct-GPTQ-Int4 Model card说明
 ```
 
 ## Vision Models
 
-- 相关示例请参考AXERA-TECH的Github仓库：[ax-samples](https://github.com/AXERA-TECH/ax-samples/tree/main)
-- 相关已量化编译模型下载路径：AXERA-TECH的HuggingFace仓库：[AXERA-TECH HF](https://huggingface.co/AXERA-TECH) 或 ModelScope仓库：[AXERA-TECH](https://modelscope.cn/organization/AXERA-TECH)
+- 相关示例请参考 AXERA-TECH 的 GitHub 仓库：[ax-samples](https://github.com/AXERA-TECH/ax-samples/tree/main)
+- 相关已量化编译模型下载路径：AXERA-TECH 的 HuggingFace 仓库：[AXERA-TECH HF](https://huggingface.co/AXERA-TECH) 或 ModelScope 仓库：[AXERA-TECH](https://modelscope.cn/organization/AXERA-TECH)
 
 ## Audio Models
 
-- 相关示例请参考AXERA-TECH的Github仓库：[Sherpa-onnx.axera](https://github.com/AXERA-TECH/Sherpa-onnx.axera)
+- 相关示例请参考 AXERA-TECH 的 GitHub 仓库：[Sherpa-onnx.axera](https://github.com/AXERA-TECH/Sherpa-onnx.axera)
