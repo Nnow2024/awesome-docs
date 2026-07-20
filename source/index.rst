@@ -1,23 +1,22 @@
-.. axcl documentation master file, created by
-   sphinx-quickstart on Tue Mar  1 17:28:24 2022.
-   You can adapt this file completely to your liking, but it should at least
-   contain the root `toctree` directive.
-
-NPU AWESOME
+AXERA 边缘计算产品线“一指禅”文档
 =======================================
 
+本站收录 AXERA `边缘计算 <https://www.axera-tech.com/zh-hans/product/edge-aI-inference>`_ 产品线的技术资料，
+本文档面向 AXERA 边缘计算产品的开发者及潜在商业合作伙伴，旨在一站式呈现产品芯片规格、开发环境、算法示例及行业解决方案等核心内容。用户可依托本文档完成绝大部分基础认知与自查使用需求，最大程度降低对原厂技术支持的依赖、减少咨询对接成本，同时高效助力产品推广与技术普及。
+
 .. toctree::
-  :maxdepth: 1
-  :numbered:
+  :maxdepth: 2
+  :numbered: 3
   :caption: 目录
   :name: Contents
 
-  00_introduction.md
-  01_hardware.md
-  02_software.md
-  03_samples.md
-  04_samples-axcl-x86.md
-  05_samples-axcl-x86-parallel.md
-  06_samples-axcl-aarch64.md
-  07_faq.md
-  08_resource.md
+  01_overview/index
+  02_benchmark/index
+  03_quick_start/index
+  04_hardware/index
+  05_software/index
+  06_samples/index
+  07_solutions/index
+  08_3rdparty_hardware/index
+  09_3rdparty_solutions/index
+  10_community/index
